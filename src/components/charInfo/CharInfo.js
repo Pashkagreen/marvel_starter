@@ -1,4 +1,6 @@
 import { Component } from "react";
+import { checkPropTypes } from "prop-types";
+import PropTypes from "prop-types";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Skeleton from "../skeleton/Skeleton";
@@ -112,6 +114,10 @@ const View = ({ char }) => {
       </ul>
     </>
   );
+};
+
+CharInfo.checkPropTypes = {
+  charId: checkPropTypes.number,
 };
 
 export default CharInfo;
